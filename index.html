@@ -41,6 +41,35 @@ li {
     border-radius: 10px;
 }
 
+            .visit-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f2f5;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.visit-counter .icon {
+    font-size: 1.2rem;
+}
+
+#counter-display {
+    color: #007bff; /* Синій колір для цифри */
+    font-size: 1.1rem;
+}
+
+.visit-counter .label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: normal;
+}
+
+
     </style>
 </head>
 <body>
@@ -55,6 +84,11 @@ li {
     <h2>🎬 Трейлер гри:</h2>
     <iframe width="795" height="447" src="https://www.youtube.com/embed/WuwxkkSSeug" title="Sirius - No more Brawl Stars! (Brawl Stars Animation)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p>Зробив Бережний Учен 8 класу на уроці інформатики 😊</p>
+    <div class="visit-counter">
+    <span class="icon">👁️</span>
+    <span id="counter-display">0</span>
+    <span class="label">переглядів</span>
+</div>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
     // Отримуємо поточне значення з пам'яті браузера
