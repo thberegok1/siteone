@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://rawgit.com/markhillard/Editor/gh-pages/css/reset.css">
-<style>
-
-</style>
-</head>
-<body>
-<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -66,14 +55,23 @@ li {
     <h2>🎬 Трейлер гри:</h2>
     <iframe width="795" height="447" src="https://www.youtube.com/embed/WuwxkkSSeug" title="Sirius - No more Brawl Stars! (Brawl Stars Animation)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     <p>Зробив Бережний Учен 8 класу на уроці інформатики 😊</p>
-</body>
-</html>
-<script>
-$(document).ready(function () {
-    $('h1').fadeOut(800).fadeIn(800);
-    $('p').first().delay(400).fadeOut(800).fadeIn(400);
-    $('p').last().delay(800).fadeOut(800).fadeIn(400);
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Отримуємо поточне значення з пам'яті браузера
+    let visits = localStorage.getItem('visitCount');
+
+    // Якщо це перший візит, встановлюємо 0
+    if (visits === null) {
+        visits = 0;
+    }
+
+    // Збільшуємо на 1 та зберігаємо
+    visits++;
+    localStorage.setItem('visitCount', visits);
+
+    // Виводимо на сторінку
+    document.getElementById('counter-display').innerText = `Ви відвідали цю сторінку ${visits} разів`;
 });
-</script>
+        </script>
 </body>
 </html>
